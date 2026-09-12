@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Mjy</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="awaiting-start">
+    <div class="cursor-circle" aria-hidden="true"></div>
+
+    <div class="intro-overlay" role="dialog" aria-modal="true" aria-label="Welcome">
+        <div class="intro-text">Welcome</div>
+        <button class="intro-start" type="button">Press Start</button>
+    </div>
+
+    <header class="topbar">
+        <nav class="nav" aria-label="Main navigation">
+            <div class="nav-links">
+                <a href="#profile">Profile</a>
+                <a href="#about">About Me</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+<main>
+        <section id="profile" class="section hero">
+            <div class="card hero-card border-0 shadow-lg">
+                <div class="card-body greets">
+                    <span class="profile-entry">
+                        <img src="images/profile.jpe" class="profile">
+                    </span>
+                    <h1>Hello, I'm Michael James Grajo!</h1>
+                    <p class="sentence1 mb-0">
+                        Information Technology Student from Batangas State University
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="fade-transition" aria-hidden="true"></div>
+
+        <section id="about" class="section">
+            <div class="card about-card border-0 shadow-lg">
+                <div class="card-body">
+                    <h2 class="card-title mb-3">About Me</h2>
+
+                    <div class="about-toggle-group btn-group" role="group" aria-label="About me sections">
+                        <button class="about-tab btn btn-success active" data-target="about-panel">About Me</button>
+                        <button class="about-tab btn btn-outline-success" data-target="skills-panel">Skills</button>
+                        <button class="about-tab btn btn-outline-success" data-target="interactive-panel">Interactive</button>
+                    </div>
+
+                    <div class="about-panel active card border-0" id="about-panel">
+                        <div class="card-body">
+                            <div class="about-details" aria-label="Personal information">
+                                <div class="about-detail" tabindex="0">
+                                    <span class="about-detail-label">Name</span>
+                                    <span class="about-detail-value">Michael James Olayao Grajo</span>
+                                </div>
+                                <div class="about-detail" tabindex="0">
+                                    <span class="about-detail-label">Age</span>
+                                    <span class="about-detail-value">20 years old</span>
+                                </div>
+                                <div class="about-detail" tabindex="0">
+                                    <span class="about-detail-label">Birthday</span>
+                                    <span class="about-detail-value">March 24, 2006</span>
+                                </div>
+                                <div class="about-detail" tabindex="0">
+                                    <span class="about-detail-label">Location</span>
+                                    <span class="about-detail-value">Lipa City, Batangas</span>
+                                </div>
+                                <div class="about-detail" tabindex="0">
+                                    <span class="about-detail-label">School</span>
+                                    <span class="about-detail-value">Batangas State University</span>
+                                </div>
+                                <div class="about-detail" tabindex="0">
+                                    <span class="about-detail-label">Year Level</span>
+                                    <span class="about-detail-value">3nd Year</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-panel card border-0" id="skills-panel">
+                        <div class="card-body">
+                            <div class="about-details skills-details" aria-label="Skills and descriptions">
+                                <div class="about-detail skill-detail" tabindex="0">
+                                    <span class="about-detail-label">Graphic Design</span>
+                                    <span class="about-detail-value">Creating clean and engaging visuals for digital content.</span>
+                                </div>
+                                <div class="about-detail skill-detail" tabindex="0">
+                                    <span class="about-detail-label">Video Editing</span>
+                                    <span class="about-detail-value">Turning clips, music, and ideas into clear visual stories.</span>
+                                </div>
+                                <div class="about-detail skill-detail" tabindex="0">
+                                    <span class="about-detail-label">Creative Problem Solving</span>
+                                    <span class="about-detail-value">Finding practical and original approaches to challenges.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-panel card border-0" id="interactive-panel">
+                        <div class="card-body">
+                            <h3 class="interactive-title">Get to know me</h3>
+                            <p class="interactive-copy">Choose a prompt and discover a little more about my interests.</p>
+                            <div class="interactive-actions" role="group" aria-label="Choose an interactive prompt">
+                                <button class="interactive-button btn btn-outline-success" data-prompt="interest">INTEREST</button>
+                                <button class="interactive-button btn btn-outline-success" data-prompt="hobbies">HOBBIES</button>
+                                <button class="interactive-button btn btn-outline-success" data-prompt="songs">FAVORITE SONGS</button>
+                            </div>
+                            <div class="interactive-response" id="interactive-response" aria-live="polite">
+                                Select a prompt to reveal an answer.
+                            </div>
+                            <div class="hobby-image-section" id="hobby-image-section" hidden>
+                                <img src="images/saxophone.png" alt="Hobby image" class="hobby-image" id="hobby-image" />
+                                <audio id="hobby-audio" preload="auto" src="songs/mama.mp3"></audio>
+                            </div>
+                            <div class="favorite-songs" id="favorite-songs" hidden>
+                                <h4 class="favorite-songs-title">My Top 5 Favorite Songs</h4>
+                                <div class="song-list">
+                                    <article class="song-card card">
+                                        <img src="images/album1.jpg" class="song-album" alt="Album cover for Song 1">
+                                        <div class="song-details">
+                                            <h5>Sway</h5>
+                                            <p>Bic Runga</p>
+                                            <audio controls preload="none" src="songs/song-1.mp3">Your browser does not support audio playback.</audio>
+                                        </div>
+                                    </article>
+                                    <article class="song-card card">
+                                        <img src="images/album2.jpg" class="song-album" alt="Album cover for Song 2">
+                                        <div class="song-details">
+                                            <h5>Chasing Cars</h5>
+                                            <p>Snow Patrol</p>
+                                            <audio controls preload="none" src="songs/song-2.mp3">Your browser does not support audio playback.</audio>
+                                        </div>
+                                    </article>
+                                    <article class="song-card card">
+                                        <img src="images/album-3.jpg" class="song-album" alt="Album cover for Song 3">
+                                        <div class="song-details">
+                                            <h5>Love</h5>
+                                            <p>Wave to Earth</p>
+                                            <audio controls preload="none" src="songs/song-3.mp3">Your browser does not support audio playback.</audio>
+                                        </div>
+                                    </article>
+                                    <article class="song-card card">
+                                        <img src="images/album4.jpe" class="song-album" alt="Album cover for Song 4">
+                                        <div class="song-details">
+                                            <h5>Akap</h5>
+                                            <p>Imago</p>
+                                            <audio controls preload="none" src="songs/song-4.mp3">Your browser does not support audio playback.</audio>
+                                        </div>
+                                    </article>
+                                    <article class="song-card card">
+                                        <img src="images/album-5.jpg" class="song-album" alt="Album cover for Song 5">
+                                        <div class="song-details">
+                                            <h5>Let Down</h5>
+                                            <p>Radiohead</p>
+                                            <audio controls preload="none" src="songs/song-5.mp3">Your browser does not support audio playback.</audio>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="card contact-card border-0 shadow-lg">
+                <div class="card-body text-center">
+                    <h2 class="card-title mb-3">Contact</h2>
+                    <div class="socials">
+                        <a href="https://www.instagram.com/archpella/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <img src="images/instagram.png" alt="instagram">
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61578079997588" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <img src="images/facebook.png" alt="facebook">
+                        </a>
+                        <a href="mailto:olayaomj@gmail.com" aria-label="Email">
+                            <img src="images/gmail.png" alt="gmail">
+                        </a>
+                    </div>
+                    <p class="number">+63 977 384 3794</p>
+                </div>
+            </div>
+        </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+
+</html>
